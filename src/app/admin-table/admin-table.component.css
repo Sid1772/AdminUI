@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+}
+.search {
+  text-align: center;
+}
+.filterinput {
+  border: 1px solid;
+  background: white;
+  width: 80%;
+  text-align: center;
+  /* border-radius: 43px; */
+  padding: 10px;
+}
+.page-item .page-link {
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.selectedPage {
+  background-color: blue !important;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+.table {
+  background-color: rgba(243, 245, 249, 255) !important;
+  padding: 0% 10% 0% 10%;
+}
+.nav{
+    text-align: center;
+}
