@@ -19,19 +19,42 @@ table {
   cursor: pointer;
 }
 .selectedPage {
-  background-color: blue !important;
+  background-color: #1890ff !important;
+  color: white !important;
 }
 
 .mat-row .mat-cell {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
 }
 .table {
   background-color: rgba(243, 245, 249, 255) !important;
   padding: 0% 10% 0% 10%;
 }
-.nav{
-    text-align: center;
+.nav {
+  text-align: center;
+}
+.delete {
+  margin-top: 10px;
+  border-radius: 100px;
+  height: 30px;
+  width: 141px;
+  color: white;
+  border: none;
+  background-color: #ff5171;
+  position: absolute;
+  top: 0;
+}
+.selectedRow {
+  background-color: #8080804a;
+  color: white;
+}
+.footer {
+  position: relative;
+}
+.disabled {
+  background-color: #8080804a !important ;
+  pointer-events: none;
 }
