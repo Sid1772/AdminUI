@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
-import {MatPaginatorModule} from '@angular/material/paginator';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatCheckboxModule,
     MatIconModule,
-    MatPaginatorModule,
     FormsModule
   ],
   providers: [AdminService],
