@@ -1,6 +1,14 @@
 # AdminUI
+Run `npm i` in root of Application to install all Dependencies
+This solution uses Bootstrap pagination instead of Angular Material Pagination due to its easy to control elements and styling.
+For selection in Angular Material Table an Array is used instead of Mat selection Object as it is a built in feature and would prevent/dampen future upgrades easily if we wanted to upgrade.
+
+
+
+# AdminUI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+
 
 ## Development server
 
