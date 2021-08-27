@@ -4,5 +4,9 @@
 html,body
 { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden;}
+.pagination{
+    margin-top:8px!important;
+    margin-bottom:0px !important
+}
 
 

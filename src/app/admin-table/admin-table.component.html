@@ -1,8 +1,10 @@
 <div class="search">
   <input #filter class="filterinput" (keyup)="filterGridData(filter.value)" type="text"
     placeholder="Search by Name Email Role" />
+   
 </div>
 <div class="table">
+  <label>Total Records : {{totalRecords}}</label>
   <table mat-table [dataSource]="tableData" class="mat-elevation-z8">
     <ng-container matColumnDef="check">
       <th mat-header-cell *matHeaderCellDef>
@@ -45,9 +47,9 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Actions</th>
       <td mat-cell *matCellDef="let element; let i = index">
-        <mat-icon *ngIf="!element.edit" (click)="element.edit = true">edit</mat-icon>
-        <mat-icon *ngIf="element.edit == true" (click)="element.edit = false">done</mat-icon>
-        <mat-icon (click)="delete(element)">delete</mat-icon>
+        <mat-icon title="Edit" *ngIf="!element.edit" (click)="element.edit = true">edit</mat-icon>
+        <mat-icon title="Completed" *ngIf="element.edit == true" (click)="element.edit = false">done</mat-icon>
+        <mat-icon title="Delete" (click)="delete(element)">delete</mat-icon>
       </td>
     </ng-container>
 
@@ -63,6 +65,7 @@
       Delete Selected
     </button>
     <nav class="nav" #paginator aria-label="Page navigation">
+
       <ul class="pagination">
         <li [class.disabled]="currentPage == 1" (click)="changePage(1)" class="page-item">
           <a title="First Page" class="page-link">
@@ -74,9 +77,8 @@
             <mat-icon>skip_previous</mat-icon>
           </a>
         </li>
-        <li class="page-item" (click)="changePage(i + 1)" *ngFor="let n of returnArray(noOfPages); let i = index">
-          <a [class.selectedPage]="i + 1 == currentPage" *ngIf="i <= currentPage + countShown" class="page-link">{{ i +
-            1 }}</a>
+        <li class="page-item" (click)="changePage(page)" *ngFor="let page of returnArray();">
+          <a [class.selectedPage]="page== currentPage" class="page-link">{{ page }}</a>
         </li>
         <li [class.disabled]="currentPage >= noOfPages" (click)="changePage(currentPage + 1)" class="page-item">
           <a title="Next Page" class="page-link">
@@ -89,6 +91,16 @@
           </a>
         </li>
       </ul>
+      
+      <!-- Declared form to take input on click of Enter in input Field -->
+
+      <form>
+      <label for="page">Go to Page</label>
+      <input [class.error]="+page.value>noOfPages" step="1" #page name="page" min=1 [max]="noOfPages" type="number">
+      <label for="page">Total Pages : {{noOfPages}}</label>
+      
+      <button (click)="changePage(+page.value)" hidden=true></button>
+    </form>
     </nav>
   </div>
 </div>

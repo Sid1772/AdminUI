@@ -27,7 +27,7 @@ table {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
 }
 .table {
   background-color: rgba(243, 245, 249, 255) !important;
@@ -57,4 +57,14 @@ table {
 .disabled {
   background-color: #8080804a !important ;
   pointer-events: none;
+}
+.mat-header-cell {
+  font-weight: 800 !important;
+  font-size: 20px;
+}
+.error{
+  background-color: rgb(228, 163, 163);
+}
+.hidden{
+  visibility: none;
 }
